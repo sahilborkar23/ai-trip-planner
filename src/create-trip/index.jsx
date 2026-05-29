@@ -120,6 +120,9 @@ function CreateTrip() {
               {/* From */}
               <div className='flex-1 w-full'>
                 <label className='text-sm font-semibold text-gray-600 mb-2 block'>📍 Traveling From</label>
+                {/* <GooglePlacesAutocomplete
+                  apiKey={import.meta.env.VITE_GOOGLE_PLACE_API_KEY}
+                /> */}
                 <input
                   placeholder='Ex. Mumbai, Delhi, Bangalore...'
                   type="text"

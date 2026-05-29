@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-const destinations = ['Goa', 'Paris', 'Bali', 'Dubai', 'Tokyo', 'Maldives', 'New York', 'Udaipur']
+const destinations = ['Goa', 'Paris', 'Bali', 'Dubai', 'Tokyo', 'Maldives', 'New York', 'Udaipur','Kyoto', 'Santorini', 'Marrakech', 'Queenstown', 'Havana', 'Reykjavik', 'Udaipur', 'Lisbon', 'Barcelona', 'Rome', 'Sydney', 'Cape Town', 'Istanbul', 'Bangkok', 'Prague', 'Amsterdam', 'Vienna', 'Seoul']
 
 const stats = [
   { number: '10K+', label: 'Trips Planned' },

@@ -25,11 +25,22 @@ function UserTripCardItem({ trip, onDelete }) {
             className={`h-full w-full object-cover group-hover:scale-110 transition-all duration-500 ${imgLoaded ? 'block' : 'hidden'}`}
             onLoad={() => setImgLoaded(true)}
             onError={(e) => { e.target.src = '/placeholder.jpg'; setImgLoaded(true) }} />
+
           {trip?.userSelection?.persona && (
             <div className='absolute top-3 left-3'>
               <span className='bg-white/90 text-xs font-bold px-2 py-1 rounded-full text-orange-600'>{trip.userSelection.persona}</span>
             </div>
           )}
+
+          {/* <div style={{position:'absolute', inset:0, background:'linear-gradient(to top, rgba(20,24,37,0.8), transparent)'}} />
+          <div style={{position:'absolute', top:'10px', left:'10px'}}>
+            {trip?.userSelection?.isSurpriseTrip ? (
+              <span className='tag'>✦ Surprise</span>
+            ) : trip?.userSelection?.persona ? (
+              <span className='tag'>{trip.userSelection.persona}</span>
+            ) : null}
+          </div> */}
+
           <div className='absolute top-3 right-3'>
             <span className='bg-gradient-to-r from-orange-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full'>
               {days} Day{days !== 1 ? 's' : ''}

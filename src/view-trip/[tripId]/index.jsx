@@ -4,6 +4,7 @@ import { doc, getDoc } from "firebase/firestore"
 import { db } from "@/service/firebaseConfig"
 import InfoSection from "../components/InfoSection"
 import TravelFromInfo from "../components/TravelFromInfo"
+import SurpriseBanner from "../components/SurpriseBanner"
 import Hotels from "../components/Hotels"
 import PlacesToVisit from "../components/PlacesToVisit"
 import BudgetBreakdown from "../components/BudgetBreakdown"
@@ -62,6 +63,7 @@ function Viewtrip() {
     <div className='max-w-5xl mx-auto px-5 md:px-10 py-8'>
       <InfoSection trip={trip} />
       <TravelFromInfo trip={trip} />
+      <SurpriseBanner trip={trip} />
       <BudgetBreakdown trip={trip} />
       <Hotels trip={trip} />
       <PlacesToVisit trip={trip} />

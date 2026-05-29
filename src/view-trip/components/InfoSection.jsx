@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { GetPlaceImage } from "@/service/GlobalApi"
+import DownloadPDF from "./DownloadPDF"
 
 function InfoSection({ trip }) {
   const [mainImage, setMainImage] = useState(null)
@@ -58,10 +59,16 @@ function InfoSection({ trip }) {
         </div>
 
         {/* Share button */}
-        <button onClick={handleShare}
-          className='absolute top-4 right-4 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-sm font-semibold hover:bg-white transition-all shadow'>
-          {copied ? '✅ Link Copied!' : '🔗 Share Trip'}
-        </button>
+        <div className="absolute top-4 right-4 flex items-center gap-2 z-20">
+          <button
+            onClick={handleShare}
+            className="bg-white/90 backdrop-blur px-4 py-2 rounded-full text-sm font-semibold hover:bg-white transition-all shadow"
+          >
+            {copied ? '✅ Link Copied!' : '🔗 Share Trip'}
+          </button>
+
+          <DownloadPDF trip={trip} />
+        </div>
 
         {/* Weather widget */}
         {weather && (

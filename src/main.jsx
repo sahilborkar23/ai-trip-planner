@@ -5,6 +5,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 import CreateTrip from './create-trip/index.jsx'
 import Header from './components/custom/Header.jsx'
+import SurpriseTrip from './surprise-trip/index.jsx'
 import { Toaster } from './components/ui/sonner.jsx'
 import { GoogleOAuthProvider } from '@react-oauth/google'
 import Viewtrip from './view-trip/[tripId]/index.jsx'
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <App /> },
       { path: '/create-trip', element: <CreateTrip /> },
+      { path: '/surprise-me', element: <SurpriseTrip /> },
       { path: '/view-trip/:tripId', element: <Viewtrip /> },
       { path: '/my-trips', element: <MyTrips /> },
     ]

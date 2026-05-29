@@ -24,6 +24,8 @@ function Header() {
     onError: (error) => console.log(error)
   })
 
+  if (location.pathname === '/surprise-me') return null
+
   const GetUserProfile = (tokenInfo) => {
     axios.get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${tokenInfo.access_token}`, {
       headers: { Authorization: `Bearer ${tokenInfo.access_token}`, Accept: 'application/json' }
@@ -45,6 +47,15 @@ function Header() {
       <div className='hidden md:flex items-center gap-6 text-sm font-medium text-gray-600'>
         <Link to='/' className={`hover:text-orange-500 transition-colors ${location.pathname === '/' ? 'text-orange-500' : ''}`}>Home</Link>
         <Link to='/create-trip' className={`hover:text-orange-500 transition-colors ${location.pathname === '/create-trip' ? 'text-orange-500' : ''}`}>Plan Trip</Link>
+        <Link
+          to='/surprise-me'
+          className={`transition-colors ${location.pathname === '/surprise-me'
+              ? 'text-yellow-600 font-semibold'
+              : 'text-gray-600 hover:text-yellow-600'
+            }`}
+        >
+          ✦ Surprise
+        </Link>
         {user && <Link to='/my-trips' className={`hover:text-orange-500 transition-colors ${location.pathname === '/my-trips' ? 'text-orange-500' : ''}`}>My Trips</Link>}
       </div>
 
