@@ -6,12 +6,6 @@ TripAI is an intelligent travel planning platform that generates personalized tr
 
 ---
 
-## 🌍 Live Demo
-
-🚀 Coming Soon
-
----
-
 ## ✨ Features
 
 ### 🤖 AI-Powered Trip Planning
@@ -120,30 +114,6 @@ Optimized for:
 
 ---
 
-## 📸 Screenshots
-
-### Landing Page
-
-Add screenshot here
-
-```md
-![Landing Page](./screenshots/home.png)
-```
-
-### Trip Generation
-
-```md
-![Trip Planner](./screenshots/trip.png)
-```
-
-### My Trips
-
-```md
-![My Trips](./screenshots/mytrips.png)
-```
-
----
-
 ## 🚀 Installation
 
 ### Clone Repository
@@ -226,16 +196,6 @@ src
 
 ---
 
-## 👨‍💻 Author
-
-### Sahil Borkar
-
-B.Tech Electronics & Instrumentation Engineering
-
-- Frontend Developer
-- AI Enthusiast
-- Problem Solver
-
 GitHub:
 https://github.com/sahilborkar23
 
@@ -251,12 +211,6 @@ If you found this project helpful:
 - Star the repository ⭐
 - Fork the project 🍴
 - Share feedback 💡
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License.
 
 ---
 
