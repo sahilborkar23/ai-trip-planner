@@ -1,66 +1,269 @@
-# AI Trip Planner
+# ✈️ TripAI
 
-AI-powered full-stack travel itinerary generator built using React.js, Firebase, and Google Gemini AI.
+> Plan smarter. Travel better. Powered by AI.
 
-## Overview
-
-AI Trip Planner is a web application that generates complete personalized travel itineraries using Generative AI. Users can create travel plans based on destination, budget, travel style, group type, and trip duration. The application generates detailed itineraries, hotel recommendations, budget planning, packing suggestions, and travel information within seconds.
+TripAI is an intelligent travel planning platform that generates personalized travel itineraries in seconds. Simply enter your destination, travel preferences, budget, and trip duration, and TripAI creates a complete day-by-day travel plan tailored specifically for you.
 
 ---
 
-## Features
+## 🌍 Live Demo
 
-- AI-generated travel itineraries
-- Personalized trip planning
-- Budget breakdown generation
-- Smart packing recommendations
-- Google OAuth authentication
-- Firebase cloud database integration
-- Saved trip history
-- PDF export functionality
-- Surprise Trip generator
-- Fully responsive design
+🚀 Coming Soon
 
 ---
 
-## Technologies Used
+## ✨ Features
+
+### 🤖 AI-Powered Trip Planning
+Generate detailed travel itineraries using AI based on:
+
+- Destination
+- Number of travelers
+- Budget
+- Trip duration
+- Travel style
+
+---
+
+### 📅 Smart Day-by-Day Itinerary
+
+Get a complete itinerary including:
+
+- Places to visit
+- Suggested timings
+- Activity recommendations
+- Daily planning
+
+---
+
+### 🏨 Hotel Recommendations
+
+AI suggests suitable accommodations based on:
+
+- Budget
+- Destination
+- Travel preferences
+
+---
+
+### 🌦️ Real-Time Weather Integration
+
+View live weather information for your destination to help plan activities effectively.
+
+---
+
+### 🎲 Surprise Me
+
+Feeling adventurous?
+
+Use the Surprise Me feature to discover random travel destinations around the world.
+
+---
+
+### 📍 Beautiful Destination Showcase
+
+Explore curated destinations including:
+
+- Tokyo 🇯🇵
+- Paris 🇫🇷
+- Bali 🇮🇩
+- Queenstown 🇳🇿
+- Santorini 🇬🇷
+- Switzerland 🇨🇭
+
+---
+
+### 🔐 Google Authentication
+
+Secure login using Google OAuth.
+
+Users can:
+
+- Save trips
+- Access trip history
+- Manage travel plans
+
+---
+
+### 📱 Fully Responsive
+
+Optimized for:
+
+- Desktop
+- Tablet
+- Mobile devices
+
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
+
 - React.js
-- JavaScript
-- Tailwind CSS
 - Vite
+- Tailwind CSS
+- ShadCN UI
+- React Router
 
-### Backend & Database
-- Firebase Firestore
+### Backend & Services
+
 - Firebase Authentication
+- Firestore Database
 
-### AI Integration
-- Google Gemini AI API
-- Prompt Engineering
+### AI
 
-### Deployment
-- Vercel
-- GitHub
+- Google Gemini API
 
----
+### APIs
 
-## Live Demo
-
-https://ai-trip-planner-mocha-delta.vercel.app
+- OpenWeather API
 
 ---
 
-## Project Screenshots
+## 📸 Screenshots
 
-(Add screenshots here later)
+### Landing Page
+
+Add screenshot here
+
+```md
+![Landing Page](./screenshots/home.png)
+```
+
+### Trip Generation
+
+```md
+![Trip Planner](./screenshots/trip.png)
+```
+
+### My Trips
+
+```md
+![My Trips](./screenshots/mytrips.png)
+```
 
 ---
 
-## Installation
+## 🚀 Installation
+
+### Clone Repository
 
 ```bash
-git clone https://github.com/meghh23/ai-trip-planner.git
+git clone https://github.com/sahilborkar23/ai-trip-planner.git
+```
+
+### Navigate to Project
+
+```bash
 cd ai-trip-planner
+```
+
+### Install Dependencies
+
+```bash
 npm install
+```
+
+### Create Environment File
+
+Create:
+
+```bash
+.env.local
+```
+
+Add:
+
+```env
+VITE_GOOGLE_GEMINI_API_KEY=YOUR_GEMINI_KEY
+
+VITE_FIREBASE_API_KEY=YOUR_FIREBASE_KEY
+VITE_FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAIN
+VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+VITE_FIREBASE_STORAGE_BUCKET=YOUR_STORAGE_BUCKET
+
+VITE_OPENWEATHER_API_KEY=YOUR_OPENWEATHER_KEY
+```
+
+### Run Development Server
+
+```bash
 npm run dev
+```
+
+---
+
+## 📂 Project Structure
+
+```bash
+src
+│
+├── assets/
+├── components/
+│   ├── custom/
+│   └── ui/
+│
+├── create-trip/
+├── my-trips/
+├── service/
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## 🎯 Future Improvements
+
+- PDF itinerary export
+- Trip sharing with public links
+- Flight recommendations
+- Expense tracking
+- Interactive maps
+- Multi-city trip planning
+- AI travel chatbot
+- Offline itinerary access
+
+---
+
+## 👨‍💻 Author
+
+### Sahil Borkar
+
+B.Tech Electronics & Instrumentation Engineering
+
+- Frontend Developer
+- AI Enthusiast
+- Problem Solver
+
+GitHub:
+https://github.com/sahilborkar23
+
+LinkedIn:
+https://linkedin.com/in/sahilborkar
+
+---
+
+## ⭐ Support
+
+If you found this project helpful:
+
+- Star the repository ⭐
+- Fork the project 🍴
+- Share feedback 💡
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+<div align="center">
+
+### 🌎 Travel Less Randomly. Travel Intelligently.
+
+Built with ❤️ using React, Firebase & Gemini AI
+
+</div>
