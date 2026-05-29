@@ -37,39 +37,89 @@ function Header() {
   }
 
   return (
-    <div className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/80 backdrop-blur-md'} flex justify-between items-center px-6 py-3`}>
+    <div
+      className={`sticky top-0 z-50 transition-all duration-500 ${scrolled
+          ? 'bg-[#FAF8F5]/95 backdrop-blur-xl border-b border-slate-200'
+          : 'bg-transparent'
+        } flex justify-between items-center px-6 py-4`}
+    >
 
-      <Link to='/' className='flex items-center gap-2'>
-        <div className='w-8 h-8 bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg flex items-center justify-center text-white font-bold'>T</div>
-        <span className='font-bold text-xl bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent'>TripAI</span>
+      {/* Logo Section */}
+      <Link to="/" className="flex items-center gap-3 group">
+
+        <div className="w-10 h-10 rounded-2xl bg-sky-100 flex items-center justify-center text-sky-700 font-black text-lg group-hover:rotate-12 transition-all duration-300">
+          ✈
+        </div>
+
+        <div>
+          <h1 className="font-black text-xl text-slate-900">
+            TripAI
+          </h1>
+
+          <p className="text-xs text-slate-400 -mt-1">
+            Smart Travel Planning
+          </p>
+        </div>
+
       </Link>
 
-      <div className='hidden md:flex items-center gap-6 text-sm font-medium text-gray-600'>
-        <Link to='/' className={`hover:text-orange-500 transition-colors ${location.pathname === '/' ? 'text-orange-500' : ''}`}>Home</Link>
-        <Link to='/create-trip' className={`hover:text-orange-500 transition-colors ${location.pathname === '/create-trip' ? 'text-orange-500' : ''}`}>Plan Trip</Link>
+
+
+      <div className="hidden md:flex items-center gap-2 bg-white/70 backdrop-blur-xl border border-slate-200 rounded-full px-2 py-2 shadow-sm">
         <Link
-          to='/surprise-me'
-          className={`transition-colors ${location.pathname === '/surprise-me'
-              ? 'text-yellow-600 font-semibold'
-              : 'text-gray-600 hover:text-yellow-600'
+          to="/"
+          className={`px-4 py-2 rounded-full transition-all ${location.pathname === "/"
+            ? "bg-sky-100 text-sky-700 font-semibold"
+            : "text-slate-600 hover:bg-slate-100"
             }`}
         >
-          ✦ Surprise
+          Home
         </Link>
-        {user && <Link to='/my-trips' className={`hover:text-orange-500 transition-colors ${location.pathname === '/my-trips' ? 'text-orange-500' : ''}`}>My Trips</Link>}
+
+        <Link
+          to="/create-trip"
+          className={`px-4 py-2 rounded-full transition-all ${location.pathname === "/create-trip"
+            ? "bg-violet-100 text-violet-700 font-semibold"
+            : "text-slate-600 hover:bg-slate-100"
+            }`}
+        >
+          Plan Trip
+        </Link>
+
+        <Link
+          to="/surprise-me"
+          className={`px-4 py-2 rounded-full transition-all ${location.pathname === "/surprise-me"
+            ? "bg-amber-100 text-amber-700 font-semibold"
+            : "text-slate-600 hover:bg-slate-100"
+            }`}
+        >
+          <span aria-hidden="true">✦</span> Surprise Me
+        </Link>
+
+        {user && (
+          <Link
+            to="/my-trips"
+            className={`px-4 py-2 rounded-full transition-all ${location.pathname === "/my-trips"
+              ? "bg-emerald-100 text-emerald-700 font-semibold"
+              : "text-slate-600 hover:bg-slate-100"
+              }`}
+          >
+            My Trips
+          </Link>
+        )}
       </div>
 
       <div>
         {user ? (
           <div className='flex items-center gap-3'>
             <Link to='/create-trip'>
-              <Button className='rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white border-0 hover:opacity-90'>
+              <Button className="rounded-full bg-slate-900 text-white hover:bg-slate-800">
                 + New Trip
               </Button>
             </Link>
             <Popover>
               <PopoverTrigger>
-                <img src={user?.picture} alt='' className='h-9 w-9 rounded-full ring-2 ring-orange-300 cursor-pointer' />
+                <img src={user?.picture} alt='' className="h-10 w-10 rounded-full ring-4 ring-sky-100 cursor-pointer hover:scale-105 transition-all" />
               </PopoverTrigger>
               <PopoverContent className='w-48'>
                 <div className='flex flex-col gap-1'>
@@ -85,7 +135,10 @@ function Header() {
             </Popover>
           </div>
         ) : (
-          <Button onClick={() => setOpenDialog(true)} className='bg-gradient-to-r from-orange-500 to-pink-500 text-white border-0 hover:opacity-90 rounded-full'>
+          <Button
+            onClick={() => setOpenDialog(true)}
+            className="bg-slate-900 text-white rounded-full px-6 hover:bg-slate-800"
+          >
             Sign In
           </Button>
         )}
@@ -96,8 +149,10 @@ function Header() {
           <DialogHeader>
             <DialogDescription>
               <div className='flex flex-col items-center text-center gap-4 p-4'>
-                <div className='w-12 h-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center text-white font-bold text-xl'>T</div>
-                <h2 className='font-bold text-xl text-gray-800'>Welcome to TripAI</h2>
+                <div className="w-14 h-14 bg-sky-100 rounded-2xl flex items-center justify-center text-2xl">
+                  ✈
+                </div>
+                <h2 className="font-black text-2xl text-slate-900">Welcome to TripAI</h2>
                 <p className='text-gray-500'>Sign in to save and access your AI-generated trips</p>
                 <Button onClick={login} className="w-full mt-2 flex gap-3 items-center justify-center bg-white border-2 border-gray-200 text-gray-700 hover:bg-gray-50">
                   <FcGoogle className="h-6 w-6" /> Continue with Google
